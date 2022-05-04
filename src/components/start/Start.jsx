@@ -14,27 +14,35 @@ let input = document.querySelector('.neons');
 
 function addValue1(){
   first.push(input.value);
+  document.querySelector('.neons').value = "";
 }
 function addValue2(){
   second.push(input.value);
+  input.value = "";
 }
 function addValue3(){
   third.push(input.value);
+  input.value = "";
 }
 function addValue4(){
   fourth.push(input.value);
+  input.value = "";
 }
 function addValue5(){
   fith.push(input.value);
+  input.value = "";
 }
 function addValue6(){
   sixth.push(input.value);
+  input.value = "";
 }
 function addValue7(){
   seventh.push(input.value);
+  input.value = "";
 }
 function addValue8(){
   eigth.push(input.value);
+  input.value = "";
 }
 function gameStart(){
   document.getElementById("9").remove();
