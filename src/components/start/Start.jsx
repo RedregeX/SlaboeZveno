@@ -86,8 +86,8 @@ function Start() {
             </div>
             <input type='text' placeholder=' Enter name' className='neons' onChange={event => setName(event.target.value)}/>
         </div>
-        <div class="next">
-          <a href="#"className="game" onClick={gameStart}><span>Start the game</span></a>
+        <div className="next">
+          <a href="#" className="game" onClick={gameStart}><span>Start the game</span></a>
         </div>
     </div>
   );
