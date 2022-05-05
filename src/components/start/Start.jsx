@@ -1,6 +1,4 @@
 import './Start.css';
-import {NavLink} from 'react-router-dom'
-import React from 'react'
 
 let first = [];
 let second = [];
@@ -10,39 +8,44 @@ let fith = [];
 let sixth = [];
 let seventh = [];
 let eigth = [];
-let input = document.querySelector('.neons');
+
+let inputValue;
+
+function setName(value) {
+  inputValue = value;
+}
 
 function addValue1(){
-  first.push(input.value);
+  first.push(inputValue);
   document.querySelector('.neons').value = "";
 }
 function addValue2(){
-  second.push(input.value);
-  input.value = "";
+  second.push(inputValue);
+  document.querySelector('.neons').value = "";
 }
 function addValue3(){
-  third.push(input.value);
-  input.value = "";
+  third.push(inputValue);
+  document.querySelector('.neons').value = "";
 }
 function addValue4(){
-  fourth.push(input.value);
-  input.value = "";
+  fourth.push(inputValue);
+  document.querySelector('.neons').value = "";
 }
 function addValue5(){
-  fith.push(input.value);
-  input.value = "";
+  fith.push(inputValue);
+  document.querySelector('.neons').value = "";
 }
 function addValue6(){
-  sixth.push(input.value);
-  input.value = "";
+  sixth.push(inputValue);
+  document.querySelector('.neons').value = "";
 }
 function addValue7(){
-  seventh.push(input.value);
-  input.value = "";
+  seventh.push(inputValue);
+  document.querySelector('.neons').value = "";
 }
 function addValue8(){
-  eigth.push(input.value);
-  input.value = "";
+  eigth.push(inputValue);
+  document.querySelector('.neons').value = "";
 }
 function gameStart(){
   document.getElementById("9").remove();
@@ -56,6 +59,7 @@ function gameStart(){
   document.querySelector(".neons").remove();
   document.querySelector(".game").remove();
 }
+
 function Start() {
   return (
     <div className="main">
@@ -80,7 +84,7 @@ function Start() {
               <button className="add" onClick={addValue7} id="15">Add a team player to seventh team</button>
               <button className="add" onClick={addValue8} id="16">Add a team player to eighth team</button>
             </div>
-            <input type='text' placeholder=' Enter name' className='neons'/>
+            <input type='text' placeholder=' Enter name' className='neons' onChange={event => setName(event.target.value)}/>
         </div>
         <div class="next">
           <a href="#"className="game" onClick={gameStart}><span>Start the game</span></a>
